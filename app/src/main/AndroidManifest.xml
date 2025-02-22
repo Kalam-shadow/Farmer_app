@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <uses-permission android:name="com.google.android.gms.permission.UPDATE_SIGN_IN" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/art"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/art"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FarmerApp"
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="33">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDNW3NBIs-NS-Ke4YzH3kgGZ0daWt8uhxU" />
+
+        <activity
+            android:name=".auth.AuthActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FarmerApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".auth.HomeActivity" />
+
+        <!-- Exported activities where necessary -->
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:exported="true" />
+
+        <!-- Non-exported activities (default) -->
+        <activity android:name=".veggie.MyVeggiesActivity" />
+
+        <activity
+            android:name=".chats.ChatActivity"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".profile.EditProfileActivity"/>
+        <activity android:name=".transaction.TransactionActivity"/>
+
+    </application>
+
+</manifest>

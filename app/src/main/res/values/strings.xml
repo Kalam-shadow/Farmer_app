@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Farmer App</string>
+    <string name="save">Save</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="farming_history">Farming History</string>
+    <string name="name">Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="email">Email</string>
+    <string name="default_web_client_id">334928964938-qohgd43jvrl2pfusr8hkri1fnhd193l2.apps.googleusercontent.com</string>
+
+</resources>
